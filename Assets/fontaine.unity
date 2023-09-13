@@ -149,11 +149,11 @@ Transform:
   m_GameObject: {fileID: 133591528}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 27.07}
+  m_LocalPosition: {x: 0, y: 0, z: 17.07}
   m_LocalScale: {x: 7.7352, y: 7.7352, z: 7.7352}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1930586129}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &133591530
 SpriteRenderer:
@@ -508,8 +508,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 133591529}
+  m_Children: []
   m_Father: {fileID: 945371493}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1937466257
@@ -14172,5 +14171,6 @@ Tilemap:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 133591529}
   - {fileID: 371193975}
   - {fileID: 945371493}
