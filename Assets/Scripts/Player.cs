@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float _vel = 7f;
     float _playerInput;
+    float _vertical;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,9 @@ public class Player : MonoBehaviour
     void Update()
     {
         _playerInput = Input.GetAxis("Horizontal");
-        transform.Translate(new Vector2(_playerInput, 0) * _vel * Time.deltaTime ); 
+        _vertical = Input.GetAxis("Vertical");
+        transform.Translate(new Vector2(_playerInput, _vertical) * _vel * Time.deltaTime );
+
     }
 
     
