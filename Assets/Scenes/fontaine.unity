@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 371193975}
   - component: {fileID: 371193974}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -387,8 +387,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.073797315}
-  m_Size: {x: 0.5, y: 0.7924054}
+  m_Offset: {x: 0, y: 0.072113395}
+  m_Size: {x: 0.5, y: 0.79577327}
   m_Direction: 0
 --- !u!4 &945371493
 Transform:
@@ -514,7 +514,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0089443475, y: -0.41095555}
+  m_Offset: {x: -0.0089443475, y: -0.41263294}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -525,7 +525,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.45210811, y: 0.1780889}
+  m_Size: {x: 0.45210811, y: 0.17473412}
   m_EdgeRadius: 0
 --- !u!114 &1730723658
 MonoBehaviour:
@@ -730,7 +730,7 @@ GameObject:
   - component: {fileID: 1937466263}
   - component: {fileID: 1937466262}
   - component: {fileID: 1937466261}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
