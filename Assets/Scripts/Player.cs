@@ -41,13 +41,13 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         Move();
-        PlayerMovement();
+        Animate();
        
     }
 
 //Funciones de Acción
       
-    void PlayerMovement()
+    void Animate()
       {
         _playerHorizontal = Input.GetAxis("Horizontal");
         if(_playerHorizontal != 0)
