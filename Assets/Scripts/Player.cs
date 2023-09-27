@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     Rigidbody2D _rBody2D;
     GroundSensor _sensor;
     Animator _animator;
+    SpriteRenderer _sRenderer;
 
     // Start is called before the first frame update
     
@@ -24,24 +25,26 @@ public class Player : MonoBehaviour
         _rBody2D = GetComponent<Rigidbody2D>();
         _sensor = GetComponentInChildren<GroundSensor>();
         _animator = GetComponentInChildren<Animator>();
+        _sRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Animate();
+                    
+        if (Input.GetButtonDown("Jump") && _sensor._isGrounded) 
+        {
+            Jump();
+        }
+
         
-        
-         if (Input.GetButtonDown("Jump") && _sensor._isGrounded) 
-            {
-                Jump();
-            }
-            
     }
 
     void FixedUpdate()
     {
         Move();
-        Animate();
+        
        
     }
 
@@ -49,9 +52,21 @@ public class Player : MonoBehaviour
       
     void Animate()
       {
+        _playerHorizontal = Input.GetAxis("Horizontal");
+
+        //Turn
+        if(_playerHorizontal < 0)
+        {
+            _sRenderer.flipX = true;
+        } 
+        if(_playerHorizontal > 0)
+        {
+            _sRenderer.flipX = false;
+        }   
+
 
         //Run
-        _playerHorizontal = Input.GetAxis("Horizontal");
+        
         if(_playerHorizontal != 0)
         {
             _animator.SetBool("isRunning",true);
