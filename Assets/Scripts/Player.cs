@@ -45,10 +45,12 @@ public class Player : MonoBehaviour
        
     }
 
-//Funciones de Acción
+//Funciones de Accion
       
     void Animate()
       {
+
+        //Run
         _playerHorizontal = Input.GetAxis("Horizontal");
         if(_playerHorizontal != 0)
         {
@@ -59,6 +61,7 @@ public class Player : MonoBehaviour
             _animator.SetBool("isRunning",false);
         }
 
+        //Jump
         if (_sensor._isGrounded == true)
         {
             _animator.SetBool("isJumping",false);
