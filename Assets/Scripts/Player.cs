@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("Player Stats")]   
+    [Tooltip("Controla velocidad")] 
     [SerializeField] float _vel = 7f;
     float _playerInput;
+    [Tooltip("Controla fuerza de salto")] 
     [SerializeField] float _jForce = 0.5f;
     //float _vertical;
 
     //componentes
     Rigidbody2D _rBody2D;
     GroundSensor _sensor;
+    Animator _animator;
 
     // Start is called before the first frame update
     
@@ -19,12 +23,13 @@ public class Player : MonoBehaviour
     {
         _rBody2D = GetComponent<Rigidbody2D>();
         _sensor = GetComponentInChildren<GroundSensor>();
+        _animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        _playerInput = Input.GetAxis("Horizontal");
+        
         
          if (Input.GetButtonDown("Jump") && _sensor._isGrounded) 
             {
@@ -36,29 +41,25 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+        PlayerMovement();
        
     }
 
 //Funciones de Acción
       
+    void PlayerMovement()
+      {
+        _playerInput = Input.GetAxis("Horizontal");
+        if(_playerInput != 0)
+        {
+            _animator.SetBool("isRunning",true);
+        }
+      }
+      
       void Move()
     {
-        
-
         _rBody2D.velocity = new Vector2(_playerInput * _vel, _rBody2D.velocity.y);
         
-          
-
-        /*
-         Movimiento sin fisicas
-            _vertical = Input.GetAxis("Vertical");
-            _playerInput = Input.GetAxis("Horizontal");
-            _vertical = Input.GetAxis("Vertical");
-            transform.Translate(new Vector2(_playerInput, _vertical) * _vel * Time.deltaTime ); 
-        
-        Movimiento add force (es ago erratico)
-            _rBody2D.AddForce(new Vector2(_playerInput * _vel, 0), ForceMode2D.Impulse);  
-        */
     }
 
     void Jump()
@@ -70,3 +71,14 @@ public class Player : MonoBehaviour
 
     
 }
+
+  /*
+         Movimiento sin fisicas
+            _vertical = Input.GetAxis("Vertical");
+            _playerInput = Input.GetAxis("Horizontal");
+            _vertical = Input.GetAxis("Vertical");
+            transform.Translate(new Vector2(_playerInput, _vertical) * _vel * Time.deltaTime ); 
+        
+        Movimiento add force (es ago erratico)
+            _rBody2D.AddForce(new Vector2(_playerInput * _vel, 0), ForceMode2D.Impulse);  
+        */
