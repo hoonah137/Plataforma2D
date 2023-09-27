@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         _rBody2D = GetComponent<Rigidbody2D>();
-        _sensor = GetComponentInChildren<_isGrounded>();
+        _sensor = GetComponentInChildren<GroundSensor>();
     }
 
     // Update is called once per frame
