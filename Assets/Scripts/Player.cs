@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     [Tooltip("Controla velocidad")] 
     [SerializeField] float _vel = 7f;
     float _playerHorizontal;
+    float _playerVertical;
+
     [Tooltip("Controla fuerza de salto")] 
     [SerializeField] float _jForce = 0.5f;
     //float _vertical;
@@ -30,13 +32,13 @@ public class Player : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        Animate();
-                    
+    {                    
         if (Input.GetButtonDown("Jump") && _sensor._isGrounded) 
         {
             Jump();
         }
+        
+        Animate();
 
         
     }
@@ -53,6 +55,7 @@ public class Player : MonoBehaviour
     void Animate()
       {
         _playerHorizontal = Input.GetAxis("Horizontal");
+        _playerVertical = Input.GetAxis("Vertical");
 
         //Turn
         if(_playerHorizontal < 0)
@@ -82,10 +85,13 @@ public class Player : MonoBehaviour
             _animator.SetBool("isJumping",false);
         }
 
-         if (_sensor._isGrounded == false)
+        if (_sensor._isGrounded == false)
         {
             _animator.SetBool("isJumping",true);
+
         }
+
+       
       }
       
       void Move()
@@ -96,6 +102,7 @@ public class Player : MonoBehaviour
 
     void Jump()
     { 
+      
       _rBody2D.AddForce(new Vector2(0, _jForce), ForceMode2D.Impulse);
          
 
