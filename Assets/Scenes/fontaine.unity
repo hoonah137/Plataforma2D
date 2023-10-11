@@ -609,6 +609,7 @@ MonoBehaviour:
   _vel: 3
   _jForce: 7
   _animator: {fileID: 1808888986}
+  _director: {fileID: 1905798057}
 --- !u!50 &945371495
 Rigidbody2D:
   serializedVersion: 4
@@ -1050,7 +1051,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 30a3f1e9c0c97f04887fd71b8761b75d, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0

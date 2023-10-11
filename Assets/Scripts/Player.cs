@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
+
 
 public class Player : MonoBehaviour
 {
@@ -19,6 +21,8 @@ public class Player : MonoBehaviour
     GroundSensor _sensor;
     [SerializeField] Animator _animator;
     SpriteRenderer _sRenderer;
+
+    [SerializeField] PlayableDirector _director;
 
     // Start is called before the first frame update
     
@@ -45,6 +49,11 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            _director.Play();
+        }
         
        
     }
