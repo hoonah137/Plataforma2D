@@ -608,6 +608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _vel: 3
   _jForce: 7
+  _animator: {fileID: 1808888986}
 --- !u!50 &945371495
 Rigidbody2D:
   serializedVersion: 4
@@ -1056,10 +1057,10 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: -5976135877863189788, guid: 30a3f1e9c0c97f04887fd71b8761b75d, type: 2}
     value: {fileID: 1808888986}
-  - key: {fileID: 6068508900249723765, guid: 30a3f1e9c0c97f04887fd71b8761b75d, type: 2}
-    value: {fileID: 945371496}
   - key: {fileID: -7327884622505467343, guid: 30a3f1e9c0c97f04887fd71b8761b75d, type: 2}
     value: {fileID: 282463506}
+  - key: {fileID: -3435474547365409905, guid: 30a3f1e9c0c97f04887fd71b8761b75d, type: 2}
+    value: {fileID: 945371496}
   m_ExposedReferences:
     m_References:
     - ab723e94611d5ae489a85843f3c1ccf4: {fileID: 1808888983}
@@ -1140,7 +1141,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 3.01
   m_Depth: -36.1
   m_CullingMask:
     serializedVersion: 2
@@ -1165,7 +1166,7 @@ Transform:
   m_GameObject: {fileID: 1930586126}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.4305897, y: 15.849449, z: -10}
+  m_LocalPosition: {x: 0.9800005, y: 4.41, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22514,7 +22515,7 @@ Transform:
   m_GameObject: {fileID: 1962802008}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5700006, y: 15.85, z: -10}
+  m_LocalPosition: {x: 0.49000007, y: 4.16, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
