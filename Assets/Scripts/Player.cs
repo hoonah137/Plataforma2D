@@ -116,6 +116,11 @@ public class Player : MonoBehaviour
 
     }
 
+    public void SignalRecived()
+    {
+        Debug.Log("AYOOOOO");
+    }
+
     
 }
 

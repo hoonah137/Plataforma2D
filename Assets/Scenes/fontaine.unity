@@ -535,6 +535,7 @@ GameObject:
   - component: {fileID: 945371494}
   - component: {fileID: 945371495}
   - component: {fileID: 945371496}
+  - component: {fileID: 945371497}
   m_Layer: 0
   m_Name: MC
   m_TagString: Untagged
@@ -658,6 +659,51 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &945371497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945371491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 4a16a54b776407545a7c4c0adb57a601, type: 2}
+    - {fileID: 11400000, guid: cfa4c434956a7c84bbe25b861c6ad86d, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 945371494}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: SignalRecived
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1808888987}
+          m_TargetAssemblyTypeName: McAnimatorEvent, Assembly-CSharp
+          m_MethodName: EventTest
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: I am jumping
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &971865287
 GameObject:
   m_ObjectHideFlags: 3
@@ -929,6 +975,7 @@ GameObject:
   - component: {fileID: 1808888984}
   - component: {fileID: 1808888985}
   - component: {fileID: 1808888986}
+  - component: {fileID: 1808888987}
   m_Layer: 0
   m_Name: knight
   m_TagString: Untagged
@@ -1024,6 +1071,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1808888987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808888983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38532f0b8295f814daf62b452de76db6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1905798056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,6 +1123,8 @@ PlayableDirector:
     value: {fileID: 945371496}
   - key: {fileID: -2483898164589318556, guid: 30a3f1e9c0c97f04887fd71b8761b75d, type: 2}
     value: {fileID: 282463503}
+  - key: {fileID: -3324896170952136286, guid: 30a3f1e9c0c97f04887fd71b8761b75d, type: 2}
+    value: {fileID: 945371497}
   m_ExposedReferences:
     m_References:
     - ab723e94611d5ae489a85843f3c1ccf4: {fileID: 1808888983}
