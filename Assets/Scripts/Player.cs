@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
         _rBody2D = GetComponent<Rigidbody2D>();
         _sensor = GetComponentInChildren<GroundSensor>();
         _sRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        Debug.Log (GameManager.instance.vidas);
     }
 
     // Update is called once per frame
@@ -112,6 +114,7 @@ public class Player : MonoBehaviour
     { 
       
       _rBody2D.AddForce(new Vector2(0, _jForce), ForceMode2D.Impulse);
+      SoundManager.instance.JumpSound();
          
 
     }
@@ -119,6 +122,16 @@ public class Player : MonoBehaviour
     public void SignalRecived()
     {
         Debug.Log("AYOOOOO");
+    }
+
+    void OnTriggerEnter2D (Collider2D collider)
+    {
+        if (collider.gameObject.layer == 6)
+        {
+            GameManager.instance.GameOver();
+            SoundManager.instance.GameOverSound();
+            Destroy(this.gameObject);
+        }
     }
 
     
