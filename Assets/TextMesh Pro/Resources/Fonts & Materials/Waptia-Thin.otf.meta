@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 65232e62ebeaa8f4a8a35d75e68f7012
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Waptia
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a058cb14e74c6d24990b6ee77d0909f7, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
