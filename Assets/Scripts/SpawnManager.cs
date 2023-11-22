@@ -28,7 +28,7 @@ public class SpawnManager : MonoBehaviour
        {
         Instantiate(objectPrefab, transform.position, transform.rotation);
         yield return new WaitForSeconds(spawnRate);
-
+        Destroy(gameObject);
        }
     }
 }

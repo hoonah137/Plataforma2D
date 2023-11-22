@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
 //Funciones de Accion
       
     void Animate()
-      {
+    {
         _playerHorizontal = Input.GetAxis("Horizontal");
         _playerVertical = Input.GetAxis("Vertical");
 
@@ -102,9 +102,9 @@ public class Player : MonoBehaviour
         }
 
        
-      }
+    }
       
-      void Move()
+    void Move()
     {
         _rBody2D.velocity = new Vector2(_playerHorizontal * _vel, _rBody2D.velocity.y);
         
