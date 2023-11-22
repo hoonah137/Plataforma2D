@@ -14,6 +14,8 @@ public class Bomb : MonoBehaviour
     {
         _bombIsTriggered = false;
         explode = false;
+
+        _bombRadius = GetComponentInChildren<Collider2D>();
         
     }
 
@@ -24,7 +26,7 @@ public class Bomb : MonoBehaviour
         if (_bombIsTriggered == true)
         {
             yield return new WaitForSeconds(3);
-            Boom();
+            StartCoroutine("Boom");
 
         }
     
@@ -38,9 +40,8 @@ public class Bomb : MonoBehaviour
         }
     }
 
-    void Boom()
+    IEnumerator Boom()    
     {
-     
        explode = true;
     }
 }
